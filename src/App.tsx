@@ -27,6 +27,16 @@ import DashboardPayments from "./pages/dashboard/Payments";
 import DashboardFiles from "./pages/dashboard/Files";
 import DashboardAnalytics from "./pages/dashboard/Analytics";
 
+// Content Pages
+import Resources from "./pages/Resources";
+import Blog from "./pages/Blog";
+import HelpCenter from "./pages/HelpCenter";
+import VideoLessons from "./pages/VideoLessons";
+import Legal from "./pages/Legal";
+import TermsOfService from "./pages/TermsOfService";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
+import CookiePolicy from "./pages/CookiePolicy";
+
 const queryClient = new QueryClient();
 
 const App = () => (
@@ -44,6 +54,16 @@ const App = () => (
             <Route path="courses" element={<Courses />} />
             <Route path="pricing" element={<Pricing />} />
             <Route path="about" element={<About />} />
+            
+            {/* Content Pages */}
+            <Route path="resources" element={<Resources />} />
+            <Route path="blog" element={<Blog />} />
+            <Route path="help-center" element={<HelpCenter />} />
+            <Route path="video-lessons" element={<VideoLessons />} />
+            <Route path="legal" element={<Legal />} />
+            <Route path="terms-of-service" element={<TermsOfService />} />
+            <Route path="privacy-policy" element={<PrivacyPolicy />} />
+            <Route path="cookie-policy" element={<CookiePolicy />} />
           </Route>
           
           <Route path="/" element={<AuthLayout />}>

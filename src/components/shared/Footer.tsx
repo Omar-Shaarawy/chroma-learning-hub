@@ -50,13 +50,18 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link to="/help" className="text-gray-600 hover:text-purple-500 transition-colors">
+                <Link to="/help-center" className="text-gray-600 hover:text-purple-500 transition-colors">
                   مركز المساعدة
                 </Link>
               </li>
               <li>
-                <Link to="/tutorials" className="text-gray-600 hover:text-purple-500 transition-colors">
+                <Link to="/video-lessons" className="text-gray-600 hover:text-purple-500 transition-colors">
                   الدروس المرئية
+                </Link>
+              </li>
+              <li>
+                <Link to="/resources" className="text-gray-600 hover:text-purple-500 transition-colors">
+                  المصادر
                 </Link>
               </li>
             </ul>
@@ -67,18 +72,23 @@ const Footer = () => {
             <h3 className="font-semibold text-gray-900 mb-4">قانوني</h3>
             <ul className="space-y-3">
               <li>
-                <Link to="/terms" className="text-gray-600 hover:text-purple-500 transition-colors">
+                <Link to="/terms-of-service" className="text-gray-600 hover:text-purple-500 transition-colors">
                   شروط الخدمة
                 </Link>
               </li>
               <li>
-                <Link to="/privacy" className="text-gray-600 hover:text-purple-500 transition-colors">
+                <Link to="/privacy-policy" className="text-gray-600 hover:text-purple-500 transition-colors">
                   سياسة الخصوصية
                 </Link>
               </li>
               <li>
                 <Link to="/cookie-policy" className="text-gray-600 hover:text-purple-500 transition-colors">
                   سياسة ملفات تعريف الارتباط
+                </Link>
+              </li>
+              <li>
+                <Link to="/legal" className="text-gray-600 hover:text-purple-500 transition-colors">
+                  قانوني
                 </Link>
               </li>
             </ul>
