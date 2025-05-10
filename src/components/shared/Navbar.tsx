@@ -8,36 +8,36 @@ const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <header className="border-b bg-white fixed w-full z-50">
+    <header className="border-b bg-white fixed w-full z-50" dir="rtl">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2">
             <span className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-600 to-purple-400">
-              EduPro
+              إيدو برو
             </span>
           </Link>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
             <Link to="/courses" className="text-gray-600 hover:text-purple-500 transition-colors">
-              Browse Courses
+              الدورات
             </Link>
             <Link to="/pricing" className="text-gray-600 hover:text-purple-500 transition-colors">
-              Pricing
+              الأسعار
             </Link>
             <Link to="/about" className="text-gray-600 hover:text-purple-500 transition-colors">
-              About Us
+              من نحن
             </Link>
           </nav>
 
           {/* Auth Buttons */}
           <div className="hidden md:flex items-center space-x-4">
             <Link to="/signin">
-              <Button variant="outline">Sign In</Button>
+              <Button variant="outline">تسجيل الدخول</Button>
             </Link>
             <Link to="/signup">
-              <Button>Sign Up</Button>
+              <Button>إنشاء حساب</Button>
             </Link>
           </div>
 
@@ -62,20 +62,20 @@ const Navbar = () => {
         <div className="md:hidden border-t py-2">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 flex flex-col space-y-2 pb-4">
             <Link to="/courses" className="px-4 py-2 rounded-md hover:bg-gray-100">
-              Browse Courses
+              الدورات
             </Link>
             <Link to="/pricing" className="px-4 py-2 rounded-md hover:bg-gray-100">
-              Pricing
+              الأسعار
             </Link>
             <Link to="/about" className="px-4 py-2 rounded-md hover:bg-gray-100">
-              About Us
+              من نحن
             </Link>
             <div className="flex flex-col space-y-2 pt-2 border-t">
               <Link to="/signin">
-                <Button variant="outline" className="w-full">Sign In</Button>
+                <Button variant="outline" className="w-full">تسجيل الدخول</Button>
               </Link>
               <Link to="/signup">
-                <Button className="w-full">Sign Up</Button>
+                <Button className="w-full">إنشاء حساب</Button>
               </Link>
             </div>
           </div>

@@ -141,5 +141,22 @@ export default {
 			}
 		}
 	},
-	plugins: [require("tailwindcss-animate")],
+	plugins: [
+		require("tailwindcss-animate"), 
+		// RTL support
+		function({ addUtilities }) {
+			const newUtilities = {
+			  '.rtl': {
+				direction: 'rtl',
+			  },
+			  '.ltr': {
+				direction: 'ltr',
+			  },
+			  '.space-x-reverse > :not([hidden]) ~ :not([hidden])': {
+				'--tw-space-x-reverse': '1',
+			  },
+			};
+			addUtilities(newUtilities);
+		  }
+	],
 } satisfies Config;
