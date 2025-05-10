@@ -3,14 +3,14 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-50 border-t" dir="rtl">
+    <footer className="bg-gray-50 border-t">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8" dir="rtl">
           {/* Logo and Description */}
           <div className="col-span-1 md:col-span-1">
             <Link to="/" className="flex items-center space-x-2">
               <span className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-600 to-purple-400">
-                إيدو برو
+                أستاذي
               </span>
             </Link>
             <p className="mt-4 text-gray-600 max-w-xs">
@@ -85,9 +85,9 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="border-t border-gray-200 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
+        <div className="border-t border-gray-200 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center" dir="rtl">
           <p className="text-gray-500 text-sm">
-            &copy; {new Date().getFullYear()} إيدو برو. جميع الحقوق محفوظة.
+            &copy; {new Date().getFullYear()} أستاذي. جميع الحقوق محفوظة.
           </p>
           <div className="flex space-x-6 mt-4 md:mt-0">
             <a href="#" className="text-gray-500 hover:text-purple-500">

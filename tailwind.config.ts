@@ -21,6 +21,7 @@ export default {
 		extend: {
 			fontFamily: {
 				inter: ['Inter', 'sans-serif'],
+				cairo: ['Cairo', 'sans-serif'], // Adding Cairo Arabic font
 			},
 			colors: {
 				border: 'hsl(var(--border))',
@@ -154,6 +155,24 @@ export default {
 			  },
 			  '.space-x-reverse > :not([hidden]) ~ :not([hidden])': {
 				'--tw-space-x-reverse': '1',
+			  },
+			  '.ms-auto': {
+				'margin-inline-start': 'auto',
+			  },
+			  '.me-auto': {
+				'margin-inline-end': 'auto',
+			  },
+			  '.ms-0': {
+				'margin-inline-start': '0',
+			  },
+			  '.me-0': {
+				'margin-inline-end': '0',
+			  },
+			  '.ps-0': {
+				'padding-inline-start': '0',
+			  },
+			  '.pe-0': {
+				'padding-inline-end': '0',
 			  },
 			};
 			addUtilities(newUtilities);
