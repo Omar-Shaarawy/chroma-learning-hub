@@ -60,7 +60,7 @@ const Pricing = () => {
   return (
     <>
       <Helmet>
-        <title>الأسعار | إيدو برو</title>
+        <title>الأسعار والباقات | إيدو برو</title>
         <meta name="description" content="اطلع على خطط الاشتراك وأسعار منصة إيدو برو للتعليم الإلكتروني." />
       </Helmet>
       <div className="pt-24 pb-16">
