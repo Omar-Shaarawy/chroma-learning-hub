@@ -1,11 +1,15 @@
 
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
-import { Menu, X } from "lucide-react";
+import { Link, useLocation } from "react-router-dom";
+import { Menu, X, LayoutDashboard } from "lucide-react";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const location = useLocation();
+  
+  // For demo purposes, we'll consider the user as logged in
+  const isLoggedIn = true;
 
   return (
     <header className="border-b bg-white fixed w-full z-50" dir="rtl">
@@ -33,12 +37,28 @@ const Navbar = () => {
 
           {/* Auth Buttons */}
           <div className="hidden md:flex items-center space-x-4">
-            <Link to="/signin">
-              <Button variant="outline">تسجيل الدخول</Button>
-            </Link>
-            <Link to="/signup">
-              <Button>إنشاء حساب</Button>
-            </Link>
+            {isLoggedIn ? (
+              <>
+                <Link to="/dashboard">
+                  <Button variant="outline">
+                    <LayoutDashboard className="ml-2 h-4 w-4" />
+                    لوحة التحكم
+                  </Button>
+                </Link>
+                <Link to="/">
+                  <Button variant="outline">تسجيل الخروج</Button>
+                </Link>
+              </>
+            ) : (
+              <>
+                <Link to="/signin">
+                  <Button variant="outline">تسجيل الدخول</Button>
+                </Link>
+                <Link to="/signup">
+                  <Button>إنشاء حساب</Button>
+                </Link>
+              </>
+            )}
           </div>
 
           {/* Mobile Menu Button */}
@@ -71,12 +91,28 @@ const Navbar = () => {
               من نحن
             </Link>
             <div className="flex flex-col space-y-2 pt-2 border-t">
-              <Link to="/signin">
-                <Button variant="outline" className="w-full">تسجيل الدخول</Button>
-              </Link>
-              <Link to="/signup">
-                <Button className="w-full">إنشاء حساب</Button>
-              </Link>
+              {isLoggedIn ? (
+                <>
+                  <Link to="/dashboard">
+                    <Button variant="outline" className="w-full">
+                      <LayoutDashboard className="ml-2 h-4 w-4" />
+                      لوحة التحكم
+                    </Button>
+                  </Link>
+                  <Link to="/">
+                    <Button variant="outline" className="w-full">تسجيل الخروج</Button>
+                  </Link>
+                </>
+              ) : (
+                <>
+                  <Link to="/signin">
+                    <Button variant="outline" className="w-full">تسجيل الدخول</Button>
+                  </Link>
+                  <Link to="/signup">
+                    <Button className="w-full">إنشاء حساب</Button>
+                  </Link>
+                </>
+              )}
             </div>
           </div>
         </div>

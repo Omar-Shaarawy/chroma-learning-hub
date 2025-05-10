@@ -8,6 +8,7 @@ import { Helmet } from "react-helmet";
 
 import MainLayout from "./components/layouts/MainLayout";
 import AuthLayout from "./components/layouts/AuthLayout";
+import DashboardLayout from "./components/layouts/DashboardLayout";
 
 import Index from "./pages/Index";
 import Courses from "./pages/Courses";
@@ -16,6 +17,15 @@ import About from "./pages/About";
 import SignIn from "./pages/SignIn";
 import SignUp from "./pages/SignUp";
 import NotFound from "./pages/NotFound";
+
+// Dashboard Pages
+import Dashboard from "./pages/Dashboard";
+import DashboardCourses from "./pages/dashboard/Courses";
+import DashboardLive from "./pages/dashboard/Live";
+import DashboardEngagement from "./pages/dashboard/Engagement";
+import DashboardPayments from "./pages/dashboard/Payments";
+import DashboardFiles from "./pages/dashboard/Files";
+import DashboardAnalytics from "./pages/dashboard/Analytics";
 
 const queryClient = new QueryClient();
 
@@ -39,6 +49,17 @@ const App = () => (
           <Route path="/" element={<AuthLayout />}>
             <Route path="signin" element={<SignIn />} />
             <Route path="signup" element={<SignUp />} />
+          </Route>
+
+          {/* Dashboard Routes */}
+          <Route path="/dashboard" element={<DashboardLayout />}>
+            <Route index element={<Dashboard />} />
+            <Route path="courses" element={<DashboardCourses />} />
+            <Route path="live" element={<DashboardLive />} />
+            <Route path="engagement" element={<DashboardEngagement />} />
+            <Route path="payments" element={<DashboardPayments />} />
+            <Route path="files" element={<DashboardFiles />} />
+            <Route path="analytics" element={<DashboardAnalytics />} />
           </Route>
 
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
